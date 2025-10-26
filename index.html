@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>الصفحة الرئيسية</title>
   <style>
-    /* إعدادات أساسية */
+    
     body {
       font-family: "Tajawal", sans-serif;
       background-color: #f8f8f8;
@@ -15,7 +15,7 @@
       direction: rtl;
     }
 
-    /* الشريط العلوي */
+  
     header {
       background: linear-gradient(to left, #f2a65a, #e67e22);
       display: flex;
@@ -28,13 +28,45 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
-    /* اللوجو */
+    
+    .header-logo {
+      
+      width: 80px;  
+      height: 75px; 
+      
+      
+      object-fit: contain; 
+      
+      
+      border-radius: 5px; 
+      
+      
+      border: 3px solid white;
+      
+      
+      margin-left: 30px; 
+      
+      
+      order: -1; 
+      
+  
+      transition: transform 0.3s ease;
+      
+
+      background-color: white; 
+    }
+
+    .header-logo:hover {
+        transform: scale(1.05);
+    }
+    
+  
     .logo {
       font-size: 22px;
       font-weight: bold;
     }
 
-    /* روابط الشريط */
+  
     nav a {
       color: white;
       text-decoration: none;
@@ -47,8 +79,15 @@
     nav a:hover {
       opacity: 0.8;
     }
+    
+    
+    nav {
+        font-size: 22px;
+        font-weight: bold;
+    }
 
-    /* الصفحة الرئيسية */
+
+    
     main {
       text-align: center;
       margin-top: 100px;
@@ -65,7 +104,7 @@
       margin-top: 10px;
     }
 
-    /* بطاقات بسيطة */
+    
     .cards {
       display: flex;
       justify-content: center;
@@ -114,9 +153,7 @@
     <img src="1000005927.jpg" alt="شعار جامعه صحار " class="header-logo">
 
     <nav>
-      الصفحه الرئيسيه
-      
-      
+      الصفحة الرئيسية
     </nav>
   </header>
 
