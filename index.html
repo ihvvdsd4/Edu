@@ -1,192 +1,115 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>الصفحة الرئيسية</title>
-  <style>
-    
-    body {
-      font-family: "Tajawal", sans-serif;
-      background-color: #f8f8f8;
-      color: #333;
-      margin: 0;
-      padding: 0;
-      direction: rtl;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هندسة العقل الرقمي - الصفحة الرئيسية</title>
+    <style>
+        :root {
+       
+            --color-dark: #FF9447; /* برتقالي متوسط ومشرق */
+            --color-light: #FFDDAA; /* مشمشي فاتح وناعم */
+            --text-color: #333;
+            --white-color: #FFFFFF;
+        }
 
-  
-    header {
-      background: linear-gradient(to left, #f2a65a, #e67e22);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 15px 40px;
-      border-radius: 40px;
-      margin: 20px;
-      color: white;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            background-color: #f8f8f8;
+            min-height: 100vh;
+            margin: 0;
+        }
 
-    
-    .header-logo {
+               .page-title {
+            color: var(--text-color);
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            font-weight: bold;
+            border-bottom: 3px solid var(--color-dark);
+            padding-bottom: 10px;
+        }
+
       
-      width: 80px;  
-      height: 75px; 
-      
-      
-      object-fit: contain; 
-      
-      
-      border-radius: 5px; 
-      
-      
-      border: 3px solid white;
-      
-      
-      margin-left: 30px; 
-      
-      
-      order: -1; 
-      
-  
-      transition: transform 0.3s ease;
-      
+        .home-link {
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 2px solid var(--color-dark);
+            transition: all 0.3s ease;
+        }
 
-      background-color: white; 
-    }
+        .home-link:hover {
+            background-color: var(--color-dark);
+            color: var(--white-color);
+        }
 
-    .header-logo:hover {
-        transform: scale(1.05);
-    }
-    
-  
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
-    }
+     
+        .links-container {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
-  
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 25px;
-      font-size: 18px;
-      font-weight: 500;
-      transition: opacity 0.3s;
-    }
-
-    nav a:hover {
-      opacity: 0.8;
-    }
-    
-    
-    nav {
-        font-size: 22px;
-        font-weight: bold;
-    }
+        
+        .link-box {
+            width: 220px;
+            height: 120px;
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: var(--white-color);
+            font-size: 1.4em;
+            font-weight: bold;
+            border-radius: 20px;
+            
+   
+            background: linear-gradient(135deg, var(--color-dark), var(--color-light)); 
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+            overflow: hidden; /* لة */
+        }
 
 
-    
-    main {
-      text-align: center;
-      margin-top: 100px;
-    }
+        .link-box:hover {
+            transform: translateY(-8px) scale(1.03); 
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+        }
 
-    main h1 {
-      font-size: 2.5em;
-      color: #e67e22;
-    }
-
-    main p {
-      font-size: 1.2em;
-      color: #555;
-      margin-top: 10px;
-    }
-
-    
-    .cards {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 25px;
-      margin: 60px auto;
-      max-width: 1000px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 30px;
-      width: 250px;
-      transition: transform 0.2s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card h3 {
-      color: #e67e22;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: #666;
-      font-size: 0.95em;
-    }
-
-    footer {
-      background: #f2a65a;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 60px;
-      border-radius: 30px 30px 0 0;
-    }
-  </style>
+        
+        .link-box::after {
+            content: ''; /**/
+            position: absolute;
+            bottom: 10px;
+            right: 15px;
+            font-size: 1.2em;
+            opacity: 0.8;
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <img src="1000005927.jpg" alt="شعار جامعه صحار " class="header-logo">
+    <h1 class="page-title">هندسة العقل الرقمي</h1>
 
-    <nav>
-      الصفحة الرئيسية
-    </nav>
-  </header>
-
-  <main>
-    <h1>هندسة العقل الرقمي
+    <a href="رابط_العودة_للهوم" class="home-link">الصفحة الرئيسية</a>
     
-</h1>
-    <p></p>
-
-        <div class="cards">
+    <div class="links-container">
+        <a href="رابط_صفحة_المحتويات" class="link-box">المحتويات</a>
         
-      <a href="https://www.instagram.com/reel/C5EQoy1MxRs/?igsh=MXA5Y3FvdmY4Z3B5cg==" class="card-link">
-        <h3> المحتويات</h3>
-
-      </a>
-
-      <a href="#offers" class="card-link">
-        <h3> العروض</h3>
-   
-      </a>
-
-      <a href="#activities" class="card-link">
-        <h3> الأنشطة</h3>    <div class="cards">
+        <a href="رابط_صفحة_العروض" class="link-box">العروض</a>
         
- 
-        
-      </div>
+        <a href="رابط_صفحة_الأنشطة" class="link-box">الأنشطة</a>
     </div>
-  </main>
-
-  <footer>
-
-  </footer>
 
 </body>
 </html>
